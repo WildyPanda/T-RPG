@@ -1,0 +1,31 @@
+﻿## non sorted ideas
+creamation // kill a creature under a certain HP level
+Fire trap // a trap burning the target
+Flamethrower Turret // a turret deeling fire damage in a line in front of it
+Fireball // a ball of fire dealing damage in a zone
+Flash bomb // deal damage in a small area blind enemy in a large area
+Fire cyclone // deal damage in a circle without center
+Fire barrier // fire barrier blocking sight dealing damage to enemy in contact
+
+# dragon
+weak dragon transformation 
+/// apparence : a single wing on the left sides, small horns, claws on hands, some scales
+/// buffs : small speed and movement boost, claws and horns attack damage up, small defense boost
+
+medium dragon transformation
+/// apparence : two wings, horns, claws on hands and foots, more scales
+
+strong dragon transformation
+/// apparence : two wings, big horns, claws on hands and foots, tails, full scale
+
+
+full dragon transformation : type defense
+/// apparence : big dragon, big horns, big claws, 2 small wings, big tail
+
+
+full dragon transformation : type agility
+/// apparence : small dragon, horns, small claws, 4 long wings, 2 long tails
+
+
+full dragon transformation : type offense
+/// apparence : medium size dragon, big horns, claws, 2 large wings, long tail

@@ -1,0 +1,4 @@
+
+
+void endOfTurn();
+-> applique toutes les modification de fin de tour sur le fighter ( mouvement au max, action max, etc )

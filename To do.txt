@@ -1,0 +1,76 @@
+﻿Fonction qui recupere tous les Fighter dans la zone d'action du Skill
+
+
+Reactualiser ordre de jeu avec chaque creature invoque
+
+
+Combat de boss avec grosse attaque annoncées
+
+max 2 creature spawn a la fois
+peuvent etre renvoye et gardent leurs stats actuelles
+mort definitive dans le combat / definitive A DECIDER
+
+A la mort du joueur, les creature deja sur le terrain restent, impossibilite de les renvoyer ou d'en invoquer de nouvelle, impossibilite d'utiliser de nouveaux esprits
+
+idee:
+certaines creature qui s'enrage a la mort de leur joueur / qui changent de camps a la mort du joueur
+taunt similaire a log horizon, si tu attaque un autre dans une zone definit => contre attaque
+
+
+classes de player :
+	ex
+	summoner : sorts de soutients, 3 creatures a la fois
+	fighter : sorts de boost, beaucoup de pv
+	soigneur : sort de soin, sorts de boost, faible pv
+	renard a neuf queue : tranformation en 9 etats differends de plus en plus puissant mais avec un malus a chaque queue en plus
+						: alt| creatures forcee avec 1 renard a 1 queue, un a deux queue etc
+	etc
+
+
+
+
+
+Fonctionnement Tour
+
+Debut du tour:
+> Actualiser GUI
+	> Dans FightController :
+		> Actualiser ordre de jeu
+	> Dans Fighter:
+		> Actualiser stats
+		> Actualiser sorts
+		> Actualiser esprits
+		> Actualiser creatures
+		> Si Fighter != player:
+			> Desactiver les creatures et les esprits
+		> Sinon
+			> Activer les creatures et les esprits
+		> Afficher les mouvements possible
+
+> Attente d'action
+	> Survoler sort
+		> Retirer zone de deplacement
+		> Afficher portee du sort
+	> Desurvoler sort && pas etat sort clické
+		> Retirer portee du sort
+		> Afficher zone de deplacement
+	> Click sort
+		> Retirer zone de deplacement
+		> Afficher portee du sort
+		> Ajouter l'etat sort clické
+	> Click droit && etat sort clické
+		> Retirer portee du sort
+		> Afficher zone de deplacement
+		> Retirer l'etat sort clické
+	> Click dans portee && etat sort clické
+		> Retiere portee du sort
+		> Lancer sort
+		> Afficher
+	> Survoler creature
+		> Afficher fenetre resume de creature
+	> Desurvoler creature
+		> Retirer fenetre resume creature
+	> Survoler esprit
+		> Afficher fenetre resume esprit
+	> Desurvoler esprit
+		> Retirer fenetre resume esprit

@@ -1,0 +1,47 @@
+dirige un combat entre plusieurs Player par l'intermediaire de leurs PlayerController(dirige tous les fighter) de 2
+Equipes differentes sur un terrain gere par un TerrainController
+-> gere le gui du combat
+-----------------------------------------------------------------------------------------------------------------------------------------
+List<PlayerController> team1;
+List<PlayerController> team2;
+PlayerController[] speedOrder;
+int currentPlayer;
+TerrainController terrain;
+-----------------------------------------------------------------------------------------------------------------------------------------
+FightController(List<PlayerController> team1, List<PlayerController> team2, TerrainController terrain);
+-> creer un combats entre les joueurs des equipes 1 et 2 sur un terrain
+
+void Play()
+-> joue le combat
+
+private PlayerController[] orderBySpeed();
+-> creer un tableau avec la liste de tous les !!joueurs!! par ordre de vitesse
+
+PlayerController nextPlayer();
+-> determine le prochain joueur a partir de currentPlayer et speedOrder
+
+bool isEnded();
+-> vrai si tous les Player dans les PlayerController d'une equipe sont morts
+
+bool moveFighter(Fighter fighter, Vector2 direction);
+-> deplace le fighter si possible dans la direction
+
+void attackFighter(Fighter attacking, Fighter defending, Skill skillUsed)
+-> execute une attaque de attacking avec le skill skillUsed sur Defending
+
+void showStats(Stats stats);
+-> affiche les stats sur le gui
+
+void showSkillPage(List<Skill> skills,int page);
+-> affiche une page de skills sur le gui
+
+void showSkillLine(List<Skill> skills, int line);
+-> affiche une ligne de skills sur le gui
+
+void summonCreature(Creature creature);
+-> invoque une creature sur le terrain
+-> peut etre transformer en sort si plus pratique
+
+void spiritPossession(Spirit spirit, Fighter fighter);
+-> assigne la possession d'un esprit a un combattant
+-> peut etre transformer en sort si plus pratique

@@ -1,0 +1,35 @@
+-> intermediaire entre le FightController et le Terrain
+-> gere l'affichage du terrain
+-----------------------------------------------------------------------------------------------------------------------------------------
+Cell[][] cases
+-----------------------------------------------------------------------------------------------------------------------------------------
+Terrain(Terrain terrain);
+-> creer controlleur de terrain
+
+void showTerrain();
+-> affiche le terrain
+
+bool validPos(int x, int y);
+-> true si (x,y) est dans le terrain
+
+protected bool freeCell(int x, int y);
+protected bool freeCell(Vector2 position);
+-> true si la cell cible est accessible
+
+Cell getCell(int x, int y);
+-> recupere la case de position (x,y)
+
+Dictionary<Vector2,Path> possibleMovement(Vector2 position, int movementLeft, Path path = null, Dictionary<Vector2,Path> paths = null);
+-> Dictionnaire de toutes le position ou le fighter peut se deplacer ( prend en compte les obstacles et autres joueurs ) et le chemin pour y acceder
+
+
+
+
+void clearTerrainColor();
+-> colore toutes les case avec la basicColor
+
+void showCircleArea(int x, int y, int range, Material color);
+-> colore les cases dans un cercle de rayon range et de centre (x,y) avec la couleur color
+
+void showRectangleArea(int x1, int y1, int x2, int y2, Material color);
+-> colore les cases dans le rectangle formé par les deux positions (x1,y1) et (x2,y2)

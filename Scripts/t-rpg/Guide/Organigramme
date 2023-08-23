@@ -1,0 +1,35 @@
+FightController
+-> dirige un combat entre plusieurs Player par l'intermediaire de leurs PlayerController(dirige tous les fighter) de 2 Equipes differentes sur un terrain gere par un TerrainController
+
+TerrainControlller
+-> intermediaire entre le FightController et le Terrain
+
+Terrain
+-> tableau de Cell
+
+Cell
+-> case ou peut etre un joueur OU un obstacle OU rien
+
+Fighter
+-> instance d'un personnage combattant(Fightable) qui ne dure qu'un combat et qui est modifiable
+-> modifier les informations d'un Fighter ne modifie pas les informations du personnage de base !!
+
+PlayerController
+->Instance principale d'un joueur, contient le combattant Player, une liste de combattant Creature et une liste d'esprits
+-> le joueur ne peut pas changer mais les creatures et les esprits si
+-> applique toutes les modification
+-> contiendras l'inventaire , etc
+
+Player
+-> la version combattante du joueur, peut creer un Fighter
+
+Creature
+-> un personnage combattant pouvant etre utilisé par un PlayerController lors des combats
+
+Spirits
+-> un personnage non-combattant qui peut affecter un fighter pour lui donner des sorts en plus durant un combats ainsi qu'une augmentation de statistique
+-> se regenere a la fin du combat
+
+Stats
+-> regroupement des statistique d'un personnage combattant
+-> vie max, mouvement max, pa max, attaque dans les elements, defese dans les elements, initiative(speed)

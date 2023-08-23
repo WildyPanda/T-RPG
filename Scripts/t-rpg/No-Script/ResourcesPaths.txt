@@ -1,0 +1,18 @@
+﻿Resources/ #Read-only files
+	DataFiles/ 
+		#Json files only readable
+	Prefabs/ #Scene/div/.../div/File.extension
+		FightConstructor/
+			PlayerEditor/
+				ElementCell.prefabs
+			Selector/
+				CreatureCatalog.prefabs
+				CreaturePage.prefabs
+				CreatureSkillCell.prefabs
+				ElementCellCreature.prefabs
+				SkillInventoryCell.prefabs
+			Teams/
+				PlayerCell.prefabs
+	Sprites/ 
+		Data/ # non-GUI sprites
+			

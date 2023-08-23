@@ -1,0 +1,150 @@
+! -> normalement fini
+? -> modifications probable mais imprevisible
+* -> travail a effectuer
+
+
+Global/
+	DataClasses/
+		Data.cs ?
+			ElementData // datas relative to elements
+			FightData // datas relative to fight
+			Data // general datas
+
+		FighterData.cs ?
+			FighterSprite // list of all sprites needed for a Fighter
+			FighterData // list of all FighterSprite created
+
+		GUIData.cs ?
+			GUIData // all data relative to GUI
+
+		SkillData.cs ?
+			#SkillSprite // sprites for skills
+			SkillData // all skills
+			CreatureSkillData // sprites for the creatures skills
+
+		StatsData.cs ?
+			StatsData // data relative to stats
+
+
+	GroundClasses/
+		Cell.cs !
+			Cell // object representating a cell
+
+		Ground.cs !
+			Ground // object representing the terrain
+
+		util/
+			Path.cs !
+				Path // object representing a path
+
+	PlayerClasses/
+		Creature.cs *
+			Creature
+
+		Player.cs *
+			Player
+
+		PlayerController.cs *
+			PlayerController // controller for the player and its inventory
+
+		Spirit.cs
+			Spirit
+
+		util/
+			Element.cs !
+				Element // object representing an element
+
+			Fightable.cs !
+				Fightable // Interface for object who can create a fighter
+
+			Skill.cs *
+				Skill
+
+			Stats.cs !
+				StatsRank // a rank describing a stats value from H to SS
+				ArchivedStats // stats from a previous level
+				LevelStats // stats for the current level
+				Stats // stats for all levels
+
+Fight/
+	ControllerClasses/
+		CameraController.cs
+			CameraController // control the camera while the fight is active
+
+		ClickController.cs
+			ClickController // catch click on screen during a fight
+
+		Controller.cs
+			Controller // control everything during the fight
+
+		FightController.cs
+			FightState // the current state of the fight
+			FightController // control the actions of the fight
+
+	EffectClasses/ **
+		Effect.cs *
+			Effect *
+
+	FighterClasses/
+		Fighter.cs *
+			Fighter *
+
+		FighterController.cs *
+			FighterController *
+
+		FighterStat.cs *
+			FighterStat *
+
+	GuiClasses/
+		ActionBar.cs !
+			ActionBar
+
+		CharacterButton.cs !
+			CharacterButton
+
+		CharacterOrberBar.cs !
+			CharacterOrberBar
+
+		CreatureBar.cs !
+			CreatureBar
+
+		FighterShow.cs !
+			FighterShow
+
+		GroundVisual.cs !
+			GroundVisual
+
+		GUIController.cs !
+			GUIController
+
+		LifeBar.cs !
+			LifeBar
+
+		MovementBar.cs !
+			MovementBar
+
+		ParameterButton.cs !
+			ParameterButton
+
+		SkillBar.cs !
+			SkillBar
+
+		SpiritBar.cs !
+			SpiritBar
+
+FightConstructor/ 
+	Controller.cs *
+		Controller // control everything during the FightConstructor
+
+	PlayerEditorController.cs *
+		PlayerEditorController
+
+	SelectorController.cs *
+		SelectorController
+
+	TeamsController.cs *
+		TeamsController
+
+Global/
+	ListStartEnd.cs !
+		ListStartEnd // a list where when you do next at the end you go to start
